@@ -4,3 +4,16 @@ body {
     background-color: rgb(96, 45, 77);
     font-family: Garamond, serif;
 }
+
+#profilePic {
+    margin-right: 4vw;
+    width: 35%;
+}
+h1 {
+    float: right;
+    font-size: 6vw;
+}
+
+#otherInterests {
+    font-size: 4vw;
+}
