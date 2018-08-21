@@ -1,19 +1,240 @@
 
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+/*reset ALL elements' values */
 
 body {
-    background-color: rgb(96, 45, 77);
-    font-family: Garamond, serif;
+    background-color: rgb(196, 186, 192);
+    font-family: Helvetica, serif;
+    margin: 0vw;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+#topPageContainer {
+    display: block;
+    background-color: black;
+
+}
+
+#singLights {
+    width: 100%;
+
+    /*margin:-17% 0 0 0; /*crop out top*/
+    display: block;
+    height: auto;
+}
+
+/* #topOverlay {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: block;
+  right: 0;
+  opacity: 0;
+  transition: .7s ease;
+  background-color: rgb(99, 88, 95);
+  padding: 0;
+
+}
+
+#overlayText {
+    position: relative;
+    top: 50%;
+    color: white;
+    font-size: 3vw;
+}
+
+#topPageContainer:hover #topOverlay {
+  opacity: .8;
+
+} */
+
+
+h1 {
+    float: left;
+    font-size: 5vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    color: white;
+    font-weight: lighter;
+    text-shadow: 2px 2px 5px grey;
+    padding: 2.5vw 5vw 4vw 3vw;
+
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+    color: grey;
+    padding: 2vw;
+    font-size: 25px;
+    border: none;
+    font-weight: bold;
+    font-stretch: expanded;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 1vw;
+    right: 3vw;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 1vw;
+    right: 3vw;
+    z-index: 1;
+    font-size: 12px;
+}
+
+li {
+    display: table-cell;
+    width: 5vw;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    padding: 2vw 2vw;
+    text-decoration: none;
+    display: inline-block;
+    width: 6vw;
+}
+
+/* Change color of dropdown links when hover */
+.dropdown-content a:hover {color: grey;}
+
+/* Show the dropdown menu when hovering */
+.dropdown:hover .dropdown-content {display: inline-block;}
+
+/* Make dropdown button disappear */
+.dropdown:hover .dropbtn {opacity: 0;}
+
+#about {
+    padding: 12vw 7vw 12vw 7vw;
+    position: relative;
+    display: block;
+
 }
 
 #profilePic {
-    margin-right: 4vw;
-    width: 35%;
+    float: left;
+    width: 25%;
+    padding-left: 8vw;
+    border-radius: 50%;
+
 }
-h1 {
+
+h2 {
     float: right;
-    font-size: 6vw;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    width: 60%;
+    padding-right: 4vw;
+    padding-bottom: 8vw;
+    font-weight: lighter;
+
 }
 
 #otherInterests {
-    font-size: 4vw;
+    font-size: 15px;
+    line-height: .8;
+
+}
+
+#skills {
+    clear: both;
+    display: block;
+    background-color: rgb(13, 44, 102);
+    padding: 6vw 8vw 6vw 8vw;
+    color: white;
+    overflow: hidden; /*make floats inside body*/
+}
+
+/*A lot of inline style for the tables*/
+
+h3, h4 {
+    font-size: 30px;
+    color: white;
+    font-stretch: extra-expanded;
+    background-color: rgba(229, 225, 222, .3);
+    padding: 2vw;
+}
+
+.languages {
+    font-size: 20px;
+    font-stretch: semi-expanded;
+    padding: 2vw;
+}
+
+#projects {
+    clear: both;
+    background-color: rgba(247, 124, 37, .8);
+    padding: 6vw;
+    color: white;
+    padding: 6vw 8vw 6vw 8vw;
+
+}
+
+.projectName {
+    font-size: 35px;
+    padding: 2vw;
+}
+
+.projectDiscr {
+    color: black;
+    font size: 30px;
+    padding: 2vw;
+    line-height: 4vw;
+    display: block;
+
+}
+
+li {
+    padding: 2vw;
+}
+
+th {
+    padding: 0 .5vw 0 .5vw;
+}
+
+#myWebsiteLinks:hover {
+    color: grey;
+}
+
+#myWebsiteLinks:visited {
+    color: black;
+}
+
+
+#contact {
+    clear: both;
+    text-align: center;
+    padding: 4vw;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
 }
