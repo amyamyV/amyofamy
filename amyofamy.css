@@ -13,26 +13,38 @@
 body {
     background-color: rgb(196, 186, 192);
     font-family: Helvetica, serif;
-    margin: 0vw;
     width: 100%;
     padding: 0;
     margin: 0;
 
 }
 
+body, html {
+    height: 100%;
+}
+
 #topPageContainer {
     display: block;
     background-color: black;
+    background-image: url("singLights.jpg");
+    position: relative;
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
-#singLights {
-    width: 100%;
-
+/* #singLights {
     /*margin:-17% 0 0 0; /*crop out top*/
-    display: block;
+    /*display: block;
     height: auto;
-}
+    width: 100%;
+} */
 
 /* #topOverlay {
   position: absolute;
@@ -65,9 +77,10 @@ body {
 } */
 
 
+
 h1 {
     float: left;
-    font-size: 5vw;
+    font-size: 40px;
     position: absolute;
     top: 0;
     left: 0;
@@ -76,8 +89,22 @@ h1 {
     font-weight: lighter;
     text-shadow: 2px 2px 5px grey;
     padding: 2.5vw 5vw 4vw 3vw;
+    position: fixed;
 
 }
+
+
+
+header {
+    background-color: rgba(25, 12, 0, .8);
+    top: 0;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    padding: 2.5vw 5vw 4vw 3vw;
+    z-index: 1;
+}
+
 
 
 /* Dropdown Button */
@@ -88,7 +115,11 @@ h1 {
     border: none;
     font-weight: bold;
     font-stretch: expanded;
+    z-index: 1;
+
 }
+
+
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
@@ -96,6 +127,7 @@ h1 {
     display: inline-block;
     top: 1vw;
     right: 3vw;
+    position: fixed;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -132,7 +164,7 @@ li {
 .dropdown:hover .dropbtn {opacity: 0;}
 
 #about {
-    padding: 12vw 7vw 12vw 7vw;
+    padding: 12vw 7vw 13vw 7vw;
     position: relative;
     display: block;
 
@@ -140,7 +172,7 @@ li {
 
 #profilePic {
     float: left;
-    width: 25%;
+    width: 30%;
     padding-left: 8vw;
     border-radius: 50%;
 
@@ -167,10 +199,11 @@ h2 {
 #skills {
     clear: both;
     display: block;
-    background-color: rgb(13, 44, 102);
-    padding: 6vw 8vw 6vw 8vw;
+    background-image: linear-gradient(rgb(91, 128, 173), rgb(22, 52, 89));
+    padding: 8vw 8vw 18vw 8vw;
     color: white;
     overflow: hidden; /*make floats inside body*/
+
 }
 
 /*A lot of inline style for the tables*/
@@ -180,7 +213,11 @@ h3, h4 {
     color: white;
     font-stretch: extra-expanded;
     background-color: rgba(229, 225, 222, .3);
-    padding: 2vw;
+    padding: 4vw;
+    margin: 3vw 3vw 10vw 3vw;
+    font-weight: lighter;
+    text-align: center;
+
 }
 
 .languages {
@@ -191,32 +228,52 @@ h3, h4 {
 
 #projects {
     clear: both;
-    background-color: rgba(247, 124, 37, .8);
+    background-image: linear-gradient(rgb(242, 169, 87),rgba(196, 91, 0, .8));
     padding: 6vw;
     color: white;
-    padding: 6vw 8vw 6vw 8vw;
+    padding: 8vw 8vw 18vw 8vw;
+
 
 }
 
 .projectName {
+    float: left;
     font-size: 35px;
     padding: 2vw;
+    display: block;
+    left: 0;
+    text-shadow: .5px .5px white;
+
 }
 
 .projectDiscr {
-    color: black;
+    color: rgba(17, 12, 7, .8);
     font size: 30px;
     padding: 2vw;
     line-height: 4vw;
-    display: block;
+    float: left;
+    font-stretch: expanded;
+    text-shadow: .5px .5px black;
 
 }
 
-li {
-    padding: 2vw;
+.subtitles {
+    font-family: "Lucida Console", Monaco, monospace;
+    padding: 4vw;
+    font-size: 20px;
+    top: 30vw;
+    font-stretch: ultra-expanded;
+    float: left;
+}
+#projects li {
+    padding: 4vw;
+    margin-bottom: 2vw;
+    background-color: rgba(209, 122, 56, .5);
+    width: 75%;
+
 }
 
-th {
+#skills th {
     padding: 0 .5vw 0 .5vw;
 }
 
