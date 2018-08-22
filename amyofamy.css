@@ -39,44 +39,6 @@ body, html {
 
 }
 
-/* #singLights {
-    /*margin:-17% 0 0 0; /*crop out top*/
-    /*display: block;
-    height: auto;
-    width: 100%;
-} */
-
-/* #topOverlay {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: block;
-  right: 0;
-  opacity: 0;
-  transition: .7s ease;
-  background-color: rgb(99, 88, 95);
-  padding: 0;
-
-}
-
-#overlayText {
-    position: relative;
-    top: 50%;
-    color: white;
-    font-size: 3vw;
-}
-
-#topPageContainer:hover #topOverlay {
-  opacity: .8;
-
-} */
-
-
 
 h1 {
     float: left;
@@ -172,26 +134,28 @@ li {
 
 #profilePic {
     float: left;
-    width: 30%;
-    padding-left: 8vw;
+    width: 35%;
+    padding-left: 0vw;
     border-radius: 50%;
+    padding-bottom: 5vw;
 
 }
 
 h2 {
     float: right;
     text-align: center;
-    font-size: 35px;
+    font-size: 4vw;
     color: white;
     width: 60%;
-    padding-right: 4vw;
+    padding-right: 0vw;
     padding-bottom: 8vw;
     font-weight: lighter;
+
 
 }
 
 #otherInterests {
-    font-size: 15px;
+    font-size: 1.5vw;
     line-height: .8;
 
 }
@@ -214,7 +178,7 @@ h3, h4 {
     font-stretch: extra-expanded;
     background-color: rgba(229, 225, 222, .3);
     padding: 4vw;
-    margin: 3vw 3vw 10vw 3vw;
+    margin: 3vw 3vw 7vw 3vw;
     font-weight: lighter;
     text-align: center;
 
