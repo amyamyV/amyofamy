@@ -16,7 +16,6 @@ body {
     width: 100%;
     padding: 0;
     margin: 0;
-
 }
 
 body, html {
@@ -36,7 +35,6 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 
@@ -52,7 +50,6 @@ h1 {
     text-shadow: 2px 2px 5px grey;
     padding: 2.5vw 5vw 4vw 3vw;
     position: fixed;
-
 }
 
 
@@ -78,7 +75,6 @@ header {
     font-weight: bold;
     font-stretch: expanded;
     z-index: 1;
-
 }
 
 
@@ -99,21 +95,20 @@ header {
     top: 1vw;
     right: 3vw;
     z-index: 1;
-    font-size: 12px;
+    font-size: 1.8vw;
 }
 
-li {
+.dropdown-content li {
     display: table-cell;
-    width: 5vw;
+    width: 6vw;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     color: white;
-    padding: 2vw 2vw;
+    padding: 2vw 2vw 2vw 2vw;
     text-decoration: none;
     display: inline-block;
-    width: 6vw;
 }
 
 /* Change color of dropdown links when hover */
@@ -129,7 +124,6 @@ li {
     padding: 12vw 7vw 13vw 7vw;
     position: relative;
     display: block;
-
 }
 
 #profilePic {
@@ -138,7 +132,6 @@ li {
     padding-left: 0vw;
     border-radius: 50%;
     padding-bottom: 5vw;
-
 }
 
 h2 {
@@ -150,27 +143,12 @@ h2 {
     padding-right: 0vw;
     padding-bottom: 8vw;
     font-weight: lighter;
-
-
 }
 
 #otherInterests {
     font-size: 1.5vw;
     line-height: .8;
-
 }
-
-#skills {
-    clear: both;
-    display: block;
-    background-image: linear-gradient(rgb(91, 128, 173), rgb(22, 52, 89));
-    padding: 8vw 8vw 18vw 8vw;
-    color: white;
-    overflow: hidden; /*make floats inside body*/
-
-}
-
-/*A lot of inline style for the tables*/
 
 h3, h4 {
     font-size: 30px;
@@ -184,69 +162,91 @@ h3, h4 {
 
 }
 
-.languages {
-    font-size: 20px;
-    font-stretch: semi-expanded;
-    padding: 2vw;
-}
-
-#projects {
+#skills {
     clear: both;
-    background-image: linear-gradient(rgb(242, 169, 87),rgba(196, 91, 0, .8));
-    padding: 6vw;
-    color: white;
-    padding: 8vw 8vw 18vw 8vw;
-
-
-}
-
-.projectName {
-    float: left;
-    font-size: 35px;
-    padding: 2vw;
     display: block;
-    left: 0;
-    text-shadow: .5px .5px white;
-
+    background-image: linear-gradient(rgb(91, 128, 173), rgb(22, 52, 89));
+    padding: 8vw 8vw 18vw 8vw;
+    color: white;
+    overflow: hidden; /*make floats inside body*/
 }
 
-.projectDiscr {
-    color: rgba(17, 12, 7, .8);
-    font size: 30px;
-    padding: 2vw;
-    line-height: 4vw;
-    float: left;
-    font-stretch: expanded;
-    text-shadow: .5px .5px black;
 
+/*A lot of inline style for the tables*/
+
+h3, h4 {
+    font-size: 30px;
+    color: white;
+    font-stretch: extra-expanded;
+    background-color: rgba(229, 225, 222, .3);
+    padding: 4vw;
+    margin: 3vw 3vw 7vw 3vw;
+    font-weight: lighter;
+    text-align: center;
 }
 
-.subtitles {
+.subtitles { /*ex. WEBSITES, PROGRAMMING LANGUAGES*/
     font-family: "Lucida Console", Monaco, monospace;
     padding: 4vw;
     font-size: 20px;
     top: 30vw;
     font-stretch: ultra-expanded;
     float: left;
+    clear: both;
 }
-#projects li {
-    padding: 4vw;
-    margin-bottom: 2vw;
-    background-color: rgba(209, 122, 56, .5);
-    width: 75%;
 
+#languages td, #proSkills td{
+    font-size: 20px;
+    font-stretch: semi-expanded;
+    padding: 2vw;
 }
 
 #skills th {
     padding: 0 .5vw 0 .5vw;
 }
 
-#myWebsiteLinks:hover {
+#traits td {
+    font-size: 20px;
+}
+
+#projects {
+    clear: both;
+    background-image: linear-gradient(rgb(242, 169, 87),rgba(196, 91, 0, .8));
+    color: white;
+    padding: 8vw 8vw 18vw 8vw;
+}
+
+.myWebsiteLinks {
+    float: left;
+    font-size: 35px;
+    padding: 2vw;
+    left: 0;
+    text-shadow: .5px .5px black;
+    display: block;
+    clear: both;
+    background-color: rgba(247, 185, 116, .2);
+    color: rgb(69, 96, 160);
+
+}
+
+
+.projectDiscr {
+    color: rgba(17, 12, 7, .8);
+    font size: 30px;
+    padding: 2vw 2vw 6vw 2vw;
+    line-height: 4vw;
+    float: left;
+    font-stretch: expanded;
+    text-shadow: 1px .8px black;
+}
+
+
+.myWebsiteLinks:hover {
     color: grey;
 }
 
-#myWebsiteLinks:visited {
-    color: black;
+.myWebsiteLinks:visited {
+    color: rgb(9, 29, 76);
 }
 
 
