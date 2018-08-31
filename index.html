@@ -49,10 +49,22 @@
 
 <div id = "skills">
     <h3>Current Abilities </h3>
+
+<div class="tab">
+  <button class="tablinks" onclick="openSkill(event, 'languagesContainer')">PROGRAMMING LANGUAGES</button>
+  <button class="tablinks" onclick="openSkill(event, 'proSkillsContainer')">SKILLS</button>
+  <button class="tablinks" onclick="openSkill(event, 'traitsContainer')">PERSONALITY TRAITS</button>
+</div>
+
+
+<!--
 <span class = "subtitles">
 PROGRAMMING <br> LANGUAGES</span>
-<table id = "languages" style = "width:70%; padding: 2vw 2vw 10vw 2vw; left: 30%; float: right;">
-  <tr style = "font-size: 15px; font-weight: lighter;">
+-->
+
+<div id="languagesContainer" class="tabcontent">
+<table id = "languages" ><!--style = "width:70%; padding: 2vw 2vw 10vw 2vw; left: 30%; float: right;"-->
+  <tr>
     <th>LANGUAGE</th>
     <th>Basic</th>
     <th>Intermediate</th>
@@ -67,7 +79,7 @@ PROGRAMMING <br> LANGUAGES</span>
   <tr>
     <td>C</td>
     <td></td>
-    <td style="background-color: white"></td>
+    <td style= "background-color: white"></td>
     <td></td>
   </tr>
   <tr>
@@ -114,10 +126,16 @@ PROGRAMMING <br> LANGUAGES</span>
   </tr>
 </table>
 
+</div>
+
+<!--
 <span class = "subtitles">
 SKILLS <br> </span>
-<table id = "proSkills" style = "width:70%; padding: 10vw 2vw 10vw 2vw; left: 30%; float: right;">
-  <tr style = "font-size: 15px; font-weight: lighter;">
+-->
+
+<div id="proSkillsContainer" class="tabcontent">
+<table id = "proSkills" ><!--style = "width:70%; padding: 10vw 2vw 10vw 2vw; left: 30%; float: right;"-->
+  <tr>
     <th>SKILL</th>
     <th>Basic</th>
     <th>Intermediate</th>
@@ -130,9 +148,9 @@ SKILLS <br> </span>
     <td></td>
   </tr>
   <tr>
-    <td>WebDevelopment</td>
+    <td>Web Development</td>
     <td></td>
-    <td style="background-color: white"></td>
+    <td style= "background-color: white"></td>
     <td></td>
   </tr>
   <tr>
@@ -159,14 +177,30 @@ SKILLS <br> </span>
     <td style = "background-color: white"></td>
     <td></td>
   </tr>
+  <tr>
+    <td>Cantonese</td>
+    <td></td>
+    <td style = "background-color: white"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Spanish</td>
+    <td style = "background-color: white"></td>
+    <td></td>
+    <td></td>
+  </tr>
 
 </table>
 
+</div>
 
+<!--
 <span class = "subtitles" style= "right: 0; float: right;">
 PERSONALITY <br> TRAITS</span>
-<table id = "traits" style = "width:70%; padding: 2vw; right: 30%; float: left;">
-  <tr style = "font-size: 15px; font-weight: lighter;">
+-->
+<div id="traitsContainer" class="tabcontent">
+<table id = "traits" >  <!--style = "width:70%; padding: 2vw; right: 30%; float: left;"-->
+  <tr>
     <th>TRAIT</th>
     <th>Basic</th>
     <th>Intermediate</th>
@@ -182,7 +216,7 @@ PERSONALITY <br> TRAITS</span>
     <td>Creative</td>
     <td></td>
     <td></td>
-    <td  style="background-color: white"></td>
+    <td style= "background-color: white"></td>
   </tr>
   <tr>
     <td>Detail-oriented</td>
@@ -234,6 +268,7 @@ PERSONALITY <br> TRAITS</span>
   </tr>
 </table>
 
+</div>
 
 </div>
 
@@ -256,11 +291,37 @@ PERSONALITY <br> TRAITS</span>
 
 
 <div id = "contact">
-    amyvuong1998@gmail.com <br>
+    <span style= "font-size: 12px;">CONTACT:</span> <br>amyvuong1998@gmail.com <br>
     <span style = "font-size: 10px;">Updated August 2018</span>
 </div>
 
 </body>
+
+<script>
+
+function openSkill(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+
+</script>
 
 
 </html>
