@@ -222,31 +222,48 @@ h3, h4 {
     background-image: linear-gradient(rgb(242, 169, 87),rgba(196, 91, 0, .8));
     color: white;
     padding: 8vw 8vw 18vw 8vw;
+
 }
 
 .myWebsiteLinks {
     float: left;
-    font-size: 35px;
+    font-size: 40px;
     padding: 2vw;
     left: 0;
     text-shadow: .5px .5px black;
     display: block;
     clear: both;
     background-color: rgba(247, 185, 116, .2);
-    color: rgb(69, 96, 160);
+    color: rgb(124, 189, 239);
 
 }
 
 
 .projectDiscr {
-    color: rgba(17, 12, 7, .8);
-    font size: 35px;
+    color: white;
+    font-size: 15px;
     padding: 2vw 2vw 6vw 2vw;
     line-height: 4vw;
     float: left;
     font-stretch: expanded;
     text-shadow: 1px .8px black;
     border: 1px solid #ccc;
+    margin-bottom: 50px;
+    background-color:
+}
+
+.bigProDesc {
+    font-size: 20px;
+    color: rgb(227, 240, 252);
+}
+
+/*sizing based on projectDisc and myWebsiteLinks*/
+#projectsBox {
+    background-color: rgb(63, 62, 58);
+    height: 100%;
+    padding: 2vw 2vw 3vw 2vw;
+    border: 6px solid #ccc;
+
 }
 
 
@@ -255,7 +272,7 @@ h3, h4 {
 }
 
 .myWebsiteLinks:visited {
-    color: rgb(9, 29, 76);
+    color: rgb(31, 103, 158);
 }
 
 

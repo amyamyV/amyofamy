@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="amyofamy.css">
 
     <title>Amy Vuong</title>
-    <link rel="icon" href="A-favicon.png">
+    <link rel="icon" href="favicon-32x32.png">
 </head>
 
 <body>
@@ -277,16 +277,25 @@ PERSONALITY <br> TRAITS</span>
     <h4>Coding Projects</h4>
 <span class = "subtitles">WEBSITES:  <br>
 (from scratch) </span><br><br>
-    <a href = "https://amyamyv.github.io"  target="_blank" class = "myWebsiteLinks"> amyamyv.github.io </a> <br> <br>
-        <span class = "projectDiscr">Personal website of my pictures, experiences, and internet stuff I find funny</span>
-    <br>
-    <a href = "https://www.amyofamy.com"  target="_blank" class = "myWebsiteLinks"> amyofamy.com</a>  <br> <br>
-        <span class = "projectDiscr">Professional website of my skills, projects, and experience (this one) </span>
+    <div id="projectsBox">
+        <a href = "https://amyamyv.github.io"  target="_blank" class = "myWebsiteLinks"> amyamyv.github.io </a> <br> <br>
+            <p class = "projectDiscr"><span class="bigProDesc">Personal photo journal website</span><br> of my pictures, experiences, and internet stuff I find funny</p>
+        <br>
+        <a href = "https://www.amyofamy.com"  target="_blank" class = "myWebsiteLinks"> amyofamy.com</a>  <br> <br>
+            <p class = "projectDiscr"><span class="bigProDesc">Professional, personal website </span><br> of my skills, projects, and experience (this one!) </p>
 
 
-    <br>
-    <p style = "display: block; clear: both; left: 0; padding: 5vw;">...and more on the way!</p>
+        <br>
+        <a href = "http://auyyon.com"  target="_blank" class = "myWebsiteLinks"> Auyyon</a>  <br> <br>
+            <p class = "projectDiscr"> <span class="bigProDesc">Simplified online learning website </span>
+                                        <br>pointing hobby/skill seekers to certain, screened (by yours truly) free learning resources.
+                                        <br>Links listed to effectually learn skill. <br>Learn, Watch, Do, MASTER.</p>
 
+
+        <br>
+        <p style = "display: block; clear: both; left: 0; padding: 5vw;">...and more on the way!</p>
+
+    </div>
 </div>
 
 
@@ -299,6 +308,7 @@ PERSONALITY <br> TRAITS</span>
 
 <script>
 
+//collapsable 3 tabbed vertical box
 function openSkill(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
