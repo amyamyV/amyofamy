@@ -150,7 +150,7 @@ h2 {
     line-height: .8;
 }
 
-h3, h4 {
+h3, h4, h5 {
     font-size: 30px;
     color: white;
     font-stretch: extra-expanded;
@@ -162,12 +162,27 @@ h3, h4 {
 
 }
 
-#skills {
+.sections { /*all info about sections (but NOT include "Aboutme")*/
     clear: both;
-    display: block;
-    background-image: linear-gradient(rgb(91, 128, 173), rgb(22, 52, 89));
-    padding: 8vw 8vw 18vw 8vw;
     color: white;
+    padding: 8vw 8vw 18vw 8vw;
+    display: block;
+}
+
+#resumeSection {
+    background-image: linear-gradient(rgb(77, 21, 99), rgb(0, 0, 0));
+    text-align: center;
+}
+
+#resumeLink:hover {
+    color: black;
+}
+#resumeLink:visited {
+    color: rgb(227, 203, 237);
+}
+
+#skillsSection {
+    background-image: linear-gradient(rgb(91, 128, 173), rgb(22, 52, 89));
     overflow: hidden; /*make floats inside body*/
 }
 
@@ -217,12 +232,8 @@ h3, h4 {
 
 }
 
-#projects {
-    clear: both;
+#projectsSection {
     background-image: linear-gradient(rgb(242, 169, 87),rgba(196, 91, 0, .8));
-    color: white;
-    padding: 8vw 8vw 18vw 8vw;
-
 }
 
 .myWebsiteLinks {
