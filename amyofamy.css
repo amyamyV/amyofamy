@@ -145,28 +145,31 @@ h2 {
     font-weight: lighter;
 }
 
+.sectionBody {
+    padding: 30px 0px 30px 0px;
+}
+
 #otherInterests {
     font-size: 1.5vw;
     line-height: .8;
 }
 
 h3, h4, h5 {
-    font-size: 30px;
-    color: white;
-    font-stretch: extra-expanded;
-    background-color: rgba(229, 225, 222, .3);
-    padding: 4vw;
-    margin: 3vw 3vw 7vw 3vw;
+    font-size: 35px;
     font-weight: lighter;
+    color: white;
+    background-color: rgba(229, 225, 222, .3);
+    padding: 30px 0px 30px 0px;
+    margin: 0vw 0vw 6vw 0vw;
     text-align: center;
-
 }
 
 .sections { /*all info about sections (but NOT include "Aboutme")*/
     clear: both;
     color: white;
-    padding: 8vw 8vw 18vw 8vw;
+    padding: 0px 0px 50px 0px;
     display: block;
+    top: 0px;
 }
 
 #resumeSection {
@@ -189,16 +192,6 @@ h3, h4, h5 {
 
 /*A lot of inline style for the tables*/
 
-h3, h4 {
-    font-size: 30px;
-    color: white;
-    font-stretch: extra-expanded;
-    background-color: rgba(229, 225, 222, .3);
-    padding: 4vw;
-    margin: 3vw 3vw 7vw 3vw;
-    font-weight: lighter;
-    text-align: center;
-}
 
 /*ex. WEBSITES, PROGRAMMING LANGUAGES*/
 /*.subtitles {
@@ -233,18 +226,19 @@ h3, h4 {
 }
 
 #projectsSection {
-    background-image: linear-gradient(rgb(242, 169, 87),rgba(196, 91, 0, .8));
+    background-image: linear-gradient(rgb(242, 169, 87), rgba(196, 91, 0, .8));
 }
+
 
 .myWebsiteLinks {
     float: left;
-    font-size: 40px;
+    font-size: 30px;
     padding: 2vw;
     left: 0;
     text-shadow: .5px .5px black;
     display: block;
     clear: both;
-    background-color: rgba(247, 185, 116, .2);
+    /*background-color: rgba(247, 185, 116, .2);*/
     color: rgb(124, 189, 239);
 
 }
@@ -253,13 +247,13 @@ h3, h4 {
 .projectDiscr {
     color: white;
     font-size: 15px;
-    padding: 2vw 2vw 6vw 2vw;
+    padding: 1vw 2vw 0vw 2vw;
     line-height: 4vw;
     float: left;
     font-stretch: expanded;
     text-shadow: 1px .8px black;
     border: 1px solid #ccc;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     background-color:
 }
 
@@ -270,10 +264,11 @@ h3, h4 {
 
 /*sizing based on projectDisc and myWebsiteLinks*/
 #projectsBox {
-    background-color: rgb(63, 62, 58);
+    background-color: rgba(104, 120, 165, .8);
     height: 100%;
     padding: 2vw 2vw 3vw 2vw;
-    border: 6px solid #ccc;
+    margin: 0px 12px 0px 12px;
+
 
 }
 
@@ -302,6 +297,7 @@ h3, h4 {
 .tab {
     overflow: hidden;
     background-color: rgb(24, 37, 58);
+    margin: 0vw 15px 0vw 15px;
 
 }
 
@@ -332,6 +328,7 @@ h3, h4 {
     display: none;
     padding-top: 10vw;
     padding-bottom: 8vw;
+    margin: 0vw 15px 0vw 15px;
     border: 1px solid #ccc;
     border-top: none;
     text-align: center;
