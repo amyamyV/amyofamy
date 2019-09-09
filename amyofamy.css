@@ -25,16 +25,50 @@ body, html {
 #topPageContainer {
     display: block;
     background-color: black;
-    background-image: url("singLights.jpg");
-    position: relative;
+    /*background-image: url("singLights.jpg");*/
+}
 
-    /* Full height */
-    height: 100%;
 
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+#singPic, #androidPic{
+    width: 100%;
+    height: auto;
+}
+
+#androidPic {
+    width: 35vw;
+    height: auto;
+    position: absolute;
+    top: 24vw;
+    float: left;
+    left: 5%;
+    border-width: 2vw;
+    border-color: white;
+    border-style: solid;
+
+}
+
+:root {
+  --direction: -45deg;
+}
+
+
+#typewriterIntroText {
+    position: absolute;
+    top: 15vw;
+    font-size: 6vw;
+    color: white;
+    left: 20px;
+    font-weight: lighter;
+}
+
+#aboutText {
+    padding: 7vw;
+    color: white;
+    background-color: black;
+    line-height: 1.5;
+    font-weight: lighter;
+    font-size: 3vw;
 }
 
 
@@ -146,19 +180,19 @@ h2 {
 }
 
 .sectionBody {
-    padding: 30px 0px 30px 0px;
+    /*padding: 30px 0px 30px 0px;*/
+    font-weight: lighter;
 }
 
 #otherInterests {
-    font-size: 1.5vw;
-    line-height: .8;
+    font-size: 20px;
 }
 
 h3, h4, h5 {
     font-size: 35px;
     font-weight: lighter;
     color: white;
-    background-color: rgba(229, 225, 222, .3);
+    /*background-color: rgba(229, 225, 222, .3);*/
     padding: 30px 0px 30px 0px;
     margin: 0vw 0vw 6vw 0vw;
     text-align: center;
@@ -170,11 +204,17 @@ h3, h4, h5 {
     padding: 0px 0px 50px 0px;
     display: block;
     top: 0px;
+    margin-bottom: -2vw;
 }
 
 #resumeSection {
-    background-image: linear-gradient(rgb(77, 21, 99), rgb(0, 0, 0));
+    background-image: linear-gradient(rgb(196, 186, 192), rgba(77, 21, 99));
     text-align: center;
+    width: 70%;
+    margin-top: 4vw;
+    border-color: white;
+    border-width: 3vw;
+    border-style: solid;
 }
 
 #resumeLink:hover {
@@ -185,36 +225,28 @@ h3, h4, h5 {
 }
 
 #skillsSection {
-    background-image: linear-gradient(rgb(91, 128, 173), rgb(22, 52, 89));
+    background-image: linear-gradient(rgb(196, 186, 192), rgb(91, 128, 173));
     overflow: hidden; /*make floats inside body*/
+    width: 85%;
+    float: right;
+    border-color: white;
+    border-width: 3vw;
+    border-style: solid;
+    font-weight: lighter;
 }
 
 
 /*A lot of inline style for the tables*/
 
-
-/*ex. WEBSITES, PROGRAMMING LANGUAGES*/
-/*.subtitles {
-    font-family: "Lucida Console", Monaco, monospace;
-    padding: 4vw;
-    font-size: 20px;
-    top: 30vw;
-    font-stretch: ultra-expanded;
-    float: left;
-    clear: both;
-}*/
-
 #languages td, #proSkills td, #traits td{
     font-size: 17px;
     padding-top: 1vw;
     padding-bottom: 1vw;
-
 }
 
 #languages th, #proSkills th, #traits th{
     padding: 0vw 1vw 4vw 1vw;
     font-size: 15px;
-
 }
 
 #languages, #proSkills, #traits{
@@ -222,13 +254,16 @@ h3, h4, h5 {
     height:100%;
     left: 50%;
     padding-right: 1.5vw;
-
 }
 
 #projectsSection {
-    background-image: linear-gradient(rgb(242, 169, 87), rgba(196, 91, 0, .8));
+    background-image: linear-gradient(rgb(196, 186, 192), rgb(242, 169, 87));
+    width: 90%;
+    float: left;
+    border-color: white;
+    border-width: 3vw;
+    border-style: solid;
 }
-
 
 .myWebsiteLinks {
     float: left;
@@ -240,7 +275,6 @@ h3, h4, h5 {
     clear: both;
     /*background-color: rgba(247, 185, 116, .2);*/
     color: rgb(124, 189, 239);
-
 }
 
 
@@ -268,8 +302,6 @@ h3, h4, h5 {
     height: 100%;
     padding: 2vw 2vw 3vw 2vw;
     margin: 0px 12px 0px 12px;
-
-
 }
 
 
@@ -298,7 +330,6 @@ h3, h4, h5 {
     overflow: hidden;
     background-color: rgb(24, 37, 58);
     margin: 0vw 15px 0vw 15px;
-
 }
 
 .tab button {

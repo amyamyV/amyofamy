@@ -4,6 +4,8 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="keywords" content="Amy Vuong">
+    <meta name="author" content="Amy Vuong">
 
 
     <link rel="stylesheet" type="text/css" href="amyofamy.css">
@@ -13,10 +15,6 @@
 </head>
 
 <body>
-
-
-<div id = "topPageContainer">
-
 
 <header>
     <h1>
@@ -35,26 +33,118 @@
     </div>
 </header>
 
+<div id = "topPageContainer">
+    <p id="typewriterIntroText"> </p>
+    <img id ="androidPic" onload="" src="AndroidPic.jpg">
+    <img id ="singPic" src="singLights.jpg">
+
 </div>
 
-
-<div id = "about">
-    <img id = "profilePic" src = "AndroidPic.jpg" title="Picture of Me with Android Plushy" alt = "A pic of happy me." >
-<!--    <a href="ResumeFall2018.pdf" download="ResumeFall2018" target="_blank">My Resume</a>-->
-
-
-    <h2>Hi, I'm Amy. <br><br><span id= "myTitle">Inspiring software engineer based in USA who loves to code. </span><br>
-
-        <span id = "otherInterests">I'm always being inspired by new technology and <br> love creating some of my own. <br> Other interests are organizing, cooking/eating,
-            skiing, badminton, knitting/crocheting, painting, hoverboarding, and playing with dogs (and sometimes humans). </span>
-    </h2>
+<div id = "aboutText">
 </div>
+
+<script>
+
+    /***fade in START***/
+    function unfade() {
+        var element = document.getElementById('singPic');
+
+        var op = 0.1;  // initial opacity
+        element.style.display = 'block';
+        var timer = setInterval(function () {
+            if (op >= 1){
+                clearInterval(timer);
+            }
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op += op * 0.01;
+        }, 10);
+    }
+    unfade();
+    /***fade in END***/
+
+    /***type writer START***/
+    var i = 0;
+    var txt = 'Hello! Welcome to my website.'; /* The text */
+    var speed = 100; //smaller is faster
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("typewriterIntroText").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    typeWriter();
+    /******/
+
+
+    /***fade in START***/
+    function unfade2() {
+
+        var element = document.getElementById('androidPic');
+
+        var op = 0.001;  // initial opacity
+        element.style.display = 'block';
+        var timer = setInterval(function () {
+            if (op >= 1){
+                clearInterval(timer);
+            }
+            element.style.opacity = op;
+            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+            op += op * 0.008;
+        }, 10);
+    }
+    unfade2();
+    /******/
+
+
+    /***type writer START***/
+    var i2 = 0;
+    var txt2 = 'A bit about me. I am an inspiring software engineer based in USA who has fun fixing problems. \
+        I am always being inspired by new technology and love creating some of my own. \
+        Currently, I am finishing up my computer science degree at the University of Maryland College Park. Other interests of mine are organizing, baking, skiing, badminton, knitting/crocheting, painting, hoverboarding, and playing with dogs (and sometimes humans).'; /* The text */
+    var speed2 = 50;
+    function typeWriter2() {
+      if (i2 < txt2.length) {
+        document.getElementById("aboutText").innerHTML += txt2.charAt(i2);
+        i2++;
+        setTimeout(typeWriter2, speed2);
+      }
+    }
+    setTimeout(typeWriter2, 3000);
+    /******/
+
+
+
+
+</script>
+
+
+<noscript>
+    <style type="text/css">
+		#androidPic { display:none; }
+        .tabcontent { display: contents; margin-top: 3vw; margin-bottom: 9vw;}
+        .tab {margin-bottom: 2vw;}
+	</style>
+
+    <div id = "about">
+        <img id = "profilePic" src = "AndroidPic.jpg" title="Picture of Me with Android Plushy" alt = "A pic of happy me." >
+
+        <h2>Hi, I'm Amy. <br><br><span id= "myTitle">Inspiring software engineer based in USA who loves to code. </span><br>
+
+            <span id = "otherInterests">I'm always being inspired by new technology and <br> love creating some of my own. <br> Other interests are organizing, cooking/eating,
+                skiing, badminton, knitting/crocheting, painting, hoverboarding, and playing with dogs (and sometimes humans). </span>
+        </h2>
+    </div>
+</noscript>
 
 
 <div id = "resumeSection" class="sections">
     <h3>Resume</h3>
     <div class="sectionBody">
-    <span style="font-size: 20px;"><a href="resumefall2018.html" id="resumeLink">Here</a> is my current resume </span>
+        <span style="font-size: 5vw;"><a href="resume.html" id="resumeLink">Here</a> ya go </span>
     </div>
 </div>
 
@@ -63,9 +153,9 @@
 
 <div class="sectionBody">
 <div class="tab">
-  <button class="tablinks" onclick="openSkill(event, 'languagesContainer')">PROGRAMMING LANGUAGES</button>
-  <button class="tablinks" onclick="openSkill(event, 'proSkillsContainer')">SKILLS</button>
-  <button class="tablinks" onclick="openSkill(event, 'traitsContainer')">PERSONALITY TRAITS</button>
+  <button id="langLink" class="tablinks" onclick="openSkill(event, 'languagesContainer', 'langLink')">PROGRAMMING LANGUAGES</button>
+  <button id="skillLink" class="tablinks" onclick="openSkill(event, 'proSkillsContainer', 'skillLink')">SKILLS</button>
+  <button id="traitsLink" class="tablinks" onclick="openSkill(event, 'traitsContainer', 'traitsLink')">PERSONALITY TRAITS</button>
 </div>
 
 
@@ -87,6 +177,12 @@ PROGRAMMING <br> LANGUAGES</span>
     <td></td>
     <td></td>
     <td style= "background-color: white"></td>
+  </tr>
+  <tr>
+    <td>Python</td>
+    <td></td>
+    <td style= "background-color: white"></td>
+    <td></td>
   </tr>
     <tr>
       <td>HTML</td>
@@ -127,8 +223,8 @@ PROGRAMMING <br> LANGUAGES</span>
   <tr>
     <td>Ruby</td>
     <td></td>
-    <td></td>
     <td style= "background-color: white"></td>
+    <td></td>
   </tr>
   <tr>
     <td>SQL</td>
@@ -211,6 +307,7 @@ SKILLS <br> </span>
 </table>
 
 </div>
+<br><br>
 
 <!--
 <span class = "subtitles" style= "right: 0; float: right;">
@@ -294,8 +391,9 @@ PERSONALITY <br> TRAITS</span>
 <div id = "projectsSection" class="sections">
     <h5>Coding Projects</h5>
 <div class="sectionBody">
-<span class = "subtitles" style="padding-left: 8px"> WEBSITES
-(from scratch): </span><br><br>
+<span style="padding-left: 35vw; font-size: 3vw">WEBSITES
+</span>
+<br><br>
     <div id="projectsBox">
         <a href = "https://amyamyv.github.io"  target="_blank" class = "myWebsiteLinks"> amyamyv.github.io </a> <br> <br>
             <p class = "projectDiscr"><span class="bigProDesc">Personal photo journal website</span><br> of my pictures, experiences, and internet stuff I find funny</p>
@@ -321,33 +419,42 @@ PERSONALITY <br> TRAITS</span>
 
 <div id = "contact">
     <span style= "font-size: 12px;">CONTACT:</span> <br>amyvuong1998@gmail.com <br>
-    <span style = "font-size: 10px;">Updated June 2019</span>
+    <span style = "font-size: 10px;">Updated September 2019</span>
 </div>
 
 </body>
 
+
 <script>
 
 //collapsable 3 tabbed vertical box
-function openSkill(evt, cityName) {
+function openSkill(evt, skillName, linkName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    if (document.getElementById(skillName).style.display === "block") {
+        document.getElementById(skillName).style.display = "none";
+        document.getElementById(linkName).className = document.getElementById(linkName).className.replace(" active", "");
+
+    } else {
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(skillName).style.display = "block";
+        evt.currentTarget.className += " active";
     }
 
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
 }
 
 
