@@ -207,6 +207,12 @@ h3, h4, h5 {
     margin-bottom: -2vw;
 }
 
+.whiteBkrd {
+    display:block;
+}
+
+
+
 #resumeSection {
     background-image: linear-gradient(rgb(196, 186, 192), rgba(77, 21, 99));
     text-align: center;

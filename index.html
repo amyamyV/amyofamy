@@ -1,464 +1,456 @@
 <!doctype html>
 <html lang="en">
-  <head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <meta name="keywords" content="Amy Vuong">
+        <meta name="author" content="Amy Vuong">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <meta name="keywords" content="Amy Vuong">
-    <meta name="author" content="Amy Vuong">
+        <link rel="stylesheet" type="text/css" href="amyofamy.css">
 
-
-    <link rel="stylesheet" type="text/css" href="amyofamy.css">
-
-    <title>Amy Vuong</title>
-    <link rel="icon" href="A-favicon.png">
-</head>
+        <title>Amy Vuong</title>
+        <link rel="icon" href="A-favicon.png">
+    </head>
 
 <body>
 
-<header>
-    <h1>
-        Amy Vuong
-    </h1>
+    <header>
+        <h1>Amy Vuong</h1>
 
-    <div class="dropdown">
-        <button class="dropbtn">| | |</button>
-        <div class="dropdown-content">
-            <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skillsSection">Skills</a></li>
-            <li><a href="#projectsSection">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <div class="dropdown">
+            <button class="dropbtn">| | |</button>
+            <div class="dropdown-content">
+                <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skillsSection">Skills</a></li>
+                <li><a href="#projectsSection">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </div>
+        </div>
+    </header>
+
+    <div id = "topPageContainer">
+        <p id="typewriterIntroText"> </p>
+        <img id ="androidPic" onload="" src="AndroidPic.jpg">
+        <img id ="singPic" src="singLights.jpg">
+
+    </div>
+
+    <div id = "aboutText"></div>
+
+    <script>
+        /***fade in START***/
+        function unfade() {
+            var element = document.getElementById('singPic');
+
+            var op = 0.1;  // initial opacity
+            element.style.display = 'block';
+            var timer = setInterval(function () {
+                if (op >= 1){
+                    clearInterval(timer);
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.01;
+            }, 10);
+        }
+        unfade();
+        /***fade in END***/
+
+        /***type writer START***/
+        var i = 0;
+        var txt = 'Hello! Welcome to my website.'; /* The text */
+        var speed = 100; //smaller is faster
+
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("typewriterIntroText").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+
+        typeWriter();
+        /******/
+
+
+        /***fade in START***/
+        function unfade2() {
+
+            var element = document.getElementById('androidPic');
+
+            var op = 0.001;  // initial opacity
+            element.style.display = 'block';
+            var timer = setInterval(function () {
+                if (op >= 1){
+                    clearInterval(timer);
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.008;
+            }, 10);
+        }
+        unfade2();
+        /******/
+
+
+        /***type writer START***/
+        var i2 = 0;
+        var txt2 = 'A bit about me. I am an inspiring software engineer based in USA who has fun fixing problems. \
+            I am always being inspired by new technology and love creating some of my own. \
+            Currently, I am finishing up my computer science degree at the University of Maryland College Park. Other interests of mine are organizing, baking, skiing, badminton, knitting/crocheting, painting, hoverboarding, and playing with dogs (and sometimes humans).'; /* The text */
+        var speed2 = 50;
+        function typeWriter2() {
+          if (i2 < txt2.length) {
+            document.getElementById("aboutText").innerHTML += txt2.charAt(i2);
+            i2++;
+            setTimeout(typeWriter2, speed2);
+          }
+        }
+        setTimeout(typeWriter2, 3000);
+        /******/
+    </script>
+
+
+    <noscript> <!--when javascript not enabled-->
+        <style type="text/css">
+    		#androidPic { display:none; }
+            .tabcontent { display: contents; margin-top: 3vw; margin-bottom: 9vw;}
+            .tab {margin-bottom: 2vw;}
+    	</style>
+
+        <div id = "about">
+            <img id = "profilePic" src = "AndroidPic.jpg" title="Picture of Me with Android Plushy" alt = "A pic of happy me." >
+
+            <h2>Hi, I'm Amy. <br><br><span id= "myTitle">Inspiring software engineer based in USA who loves to code. </span><br>
+
+                <span id = "otherInterests">I'm always being inspired by new technology and <br> love creating some of my own. <br> Other interests are organizing, cooking/eating,
+                    skiing, badminton, knitting/crocheting, painting, hoverboarding, and playing with dogs (and sometimes humans). </span>
+            </h2>
+        </div>
+    </noscript>
+
+
+    <div id = "resumeSection" class="sections">
+        <h3>Resume</h3>
+        <div class="sectionBody">
+            <span style="font-size: 5vw;"><a href="resume.html" id="resumeLink">Here</a> ya go </span>
         </div>
     </div>
-</header>
 
-<div id = "topPageContainer">
-    <p id="typewriterIntroText"> </p>
-    <img id ="androidPic" onload="" src="AndroidPic.jpg">
-    <img id ="singPic" src="singLights.jpg">
+    <div id = "skillsSection" class="sections">
+        <h4>Current Abilities </h4>
 
-</div>
+        <div class="sectionBody">
+            <div class="tab">
+              <button id="langLink" class="tablinks" onclick="openSkill(event, 'languagesContainer', 'langLink', 'languages')">PROGRAMMING LANGUAGES</button>
+              <button id="skillLink" class="tablinks" onclick="openSkill(event, 'proSkillsContainer', 'skillLink', 'proSkills')">SKILLS</button>
+              <button id="traitsLink" class="tablinks" onclick="openSkill(event, 'traitsContainer', 'traitsLink', 'traits')">PERSONALITY TRAITS</button>
+            </div>
 
-<div id = "aboutText">
-</div>
 
-<script>
+            <div id="languagesContainer" class="tabcontent">
+            <table id = "languages">
+                <th>LANGUAGE</th>
+                <th>Basic</th>
+                <th>Intermediate</th>
+                <th>Proficient</th>
+              </tr>
+              <tr>
+                <td>Java</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+              </tr>
+              <tr>
+                <td>Python</td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+              </tr>
+                <tr>
+                  <td>HTML</td>
+                  <td></td>
+                  <td></td>
+                  <td class= "whiteBkrd languages"></td>
+                </tr>
+                <tr>
+                  <td>CSS</td>
+                  <td></td>
+                  <td></td>
+                  <td class= "whiteBkrd languages"></td>
+                </tr>
+              <tr>
+                <td>C</td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>R</td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>C#</td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>OCaml</td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Ruby</td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>SQL</td>
+                <td></td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Javascript</td>
+                <td class= "whiteBkrd languages"></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            </div>
 
-    /***fade in START***/
-    function unfade() {
-        var element = document.getElementById('singPic');
 
-        var op = 0.1;  // initial opacity
-        element.style.display = 'block';
-        var timer = setInterval(function () {
-            if (op >= 1){
-                clearInterval(timer);
+            <div id="proSkillsContainer" class="tabcontent">
+                <table id = "proSkills" ><!--style = "width:70%; padding: 10vw 2vw 10vw 2vw; left: 30%; float: right;"-->
+              <tr>
+                <th>SKILL</th>
+                <th>Basic</th>
+                <th>Intermediate</th>
+                <th>Proficient</th>
+              </tr>
+              <tr>
+                <td>Algorithms</td>
+                <td></td>
+                <td  class= "whiteBkrd proSkills"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Web Development</td>
+                <td></td>
+                <td class= "whiteBkrd proSkills"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Creative Writing</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd proSkills"></td>
+              </tr>
+              <tr>
+                <td>Customer Service</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd proSkills"></td>
+              </tr>
+              <tr>
+                <td>Design</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd proSkills"></td>
+              </tr>
+              <tr>
+                <td>Googling / Research</td>
+                <td></td>
+                <td class= "whiteBkrd proSkills"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Cantonese</td>
+                <td></td>
+                <td class= "whiteBkrd proSkills"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Spanish</td>
+                <td class= "whiteBkrd proSkills"></td>
+                <td></td>
+                <td></td>
+              </tr>
+
+            </table>
+            </div>
+            <br><br>
+
+            <div id="traitsContainer" class="tabcontent">
+                <table id = "traits" >  <!--style = "width:70%; padding: 2vw; right: 30%; float: left;"-->
+              <tr>
+                <th>TRAIT</th>
+                <th>Basic</th>
+                <th>Intermediate</th>
+                <th>Proficient</th>
+              </tr>
+              <tr>
+                <td>Friendly</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd traits"></td>
+              </tr>
+              <tr>
+                <td>Creative</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd traits"></td>
+              </tr>
+              <tr>
+                <td>Detail-oriented</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd traits"></td>
+              </tr>
+              <tr>
+                <td>Organized</td>
+                <td></td>
+                <td class= "whiteBkrd traits"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Caring</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd traits"></td>
+              </tr>
+               <tr>
+                 <td>Outgoing</td>
+                 <td></td>
+                 <td class= "whiteBkrd traits"></td>
+                 <td></td>
+               </tr>
+              <tr>
+                <td>Honest</td>
+                <td></td>
+                <td></td>
+                <td class= "whiteBkrd traits"></td>
+              </tr>
+              <tr>
+                <td>Awkward</td>
+                <td></td>
+                <td class= "whiteBkrd traits"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Beautiful</td>
+                <td class= "whiteBkrd traits"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Honest</td>
+                <td class= "whiteBkrd traits" style="color: black; font-size: 10px; text-align: center;">See what I did there</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        //collapsable 3 tabbed vertical box
+        function openSkill(evt, skillName, linkName, blockName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            if (document.getElementById(skillName).style.display === "block") {
+                document.getElementById(skillName).style.display = "none";
+                document.getElementById(linkName).className = document.getElementById(linkName).className.replace(" active", "");
+
+            } else {
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(skillName).style.display = "block";
+                evt.currentTarget.className += " active";
+                loadSkillBlocks(blockName);
             }
-            element.style.opacity = op;
-            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-            op += op * 0.01;
-        }, 10);
-    }
-    unfade();
-    /***fade in END***/
-
-    /***type writer START***/
-    var i = 0;
-    var txt = 'Hello! Welcome to my website.'; /* The text */
-    var speed = 100; //smaller is faster
-
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("typewriterIntroText").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-
-    typeWriter();
-    /******/
+        }
 
 
-    /***fade in START***/
-    function unfade2() {
+        function loadSkillBlocks(blockName) {
+            var skillBlocks = document.getElementsByClassName("whiteBkrd " + blockName);
+            var j = 0;
 
-        var element = document.getElementById('androidPic');
-
-        var op = 0.001;  // initial opacity
-        element.style.display = 'block';
-        var timer = setInterval(function () {
-            if (op >= 1){
-                clearInterval(timer);
+            function clearBlocks() {
+                if (j < skillBlocks.length) {
+                    skillBlocks[j].style.backgroundColor = "rgba(230, 230, 230, .2)";
+                    j++;
+                    clearBlocks();
+                }
             }
-            element.style.opacity = op;
-            element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-            op += op * 0.008;
-        }, 10);
-    }
-    unfade2();
-    /******/
+
+            function delayBlock() {
+                    if (j < skillBlocks.length) {
+                    skillBlocks[j].style.backgroundColor = "rgba(230, 230, 230, .7)";
+                    setTimeout(delayBlock, 200);
+                    j++;
+                }
+            }
+            clearBlocks();
+            j = 0;
+            delayBlock();
+        }
+    </script>
 
 
-    /***type writer START***/
-    var i2 = 0;
-    var txt2 = 'A bit about me. I am an inspiring software engineer based in USA who has fun fixing problems. \
-        I am always being inspired by new technology and love creating some of my own. \
-        Currently, I am finishing up my computer science degree at the University of Maryland College Park. Other interests of mine are organizing, baking, skiing, badminton, knitting/crocheting, painting, hoverboarding, and playing with dogs (and sometimes humans).'; /* The text */
-    var speed2 = 50;
-    function typeWriter2() {
-      if (i2 < txt2.length) {
-        document.getElementById("aboutText").innerHTML += txt2.charAt(i2);
-        i2++;
-        setTimeout(typeWriter2, speed2);
-      }
-    }
-    setTimeout(typeWriter2, 3000);
-    /******/
+    <div id = "projectsSection" class="sections">
+        <h5>Coding Projects</h5>
+        <div class="sectionBody">
+            <span style="padding-left: 35vw; font-size: 3vw">WEBSITES
+            </span>
+            <br><br>
 
+            <div id="projectsBox">
+                <a href = "https://amyamyv.github.io"  target="_blank" class = "myWebsiteLinks"> amyamyv.github.io </a> <br> <br>
+                    <p class = "projectDiscr"><span class="bigProDesc">Personal photo journal website</span><br> of my pictures, experiences, and internet stuff I find funny</p>
+                <br>
+                <a href = "https://www.amyofamy.com"  target="_blank" class = "myWebsiteLinks"> amyofamy.com</a>  <br> <br>
+                    <p class = "projectDiscr"><span class="bigProDesc">Professional, personal website </span><br> of my skills, projects, and experience (this one!) </p>
 
+                <br>
+                <a href = "http://auyyon.com"  target="_blank" class = "myWebsiteLinks"> Auyyon</a>  <br> <br>
+                    <p class = "projectDiscr"> <span class="bigProDesc">Simplified online learning website </span>
+                                                <br>pointing hobby/skill seekers to certain, screened (by yours truly) free learning resources.
+                                                <br>Links listed to effectually learn skill. <br>Learn, Watch, Do, MASTER.</p>
+                <br>
+                <p style = "display: block; clear: both; left: 0; padding: 5vw;">...and more on the way!</p>
 
-
-</script>
-
-
-<noscript>
-    <style type="text/css">
-		#androidPic { display:none; }
-        .tabcontent { display: contents; margin-top: 3vw; margin-bottom: 9vw;}
-        .tab {margin-bottom: 2vw;}
-	</style>
-
-    <div id = "about">
-        <img id = "profilePic" src = "AndroidPic.jpg" title="Picture of Me with Android Plushy" alt = "A pic of happy me." >
-
-        <h2>Hi, I'm Amy. <br><br><span id= "myTitle">Inspiring software engineer based in USA who loves to code. </span><br>
-
-            <span id = "otherInterests">I'm always being inspired by new technology and <br> love creating some of my own. <br> Other interests are organizing, cooking/eating,
-                skiing, badminton, knitting/crocheting, painting, hoverboarding, and playing with dogs (and sometimes humans). </span>
-        </h2>
+            </div>
+        </div>
     </div>
-</noscript>
 
 
-<div id = "resumeSection" class="sections">
-    <h3>Resume</h3>
-    <div class="sectionBody">
-        <span style="font-size: 5vw;"><a href="resume.html" id="resumeLink">Here</a> ya go </span>
+    <div id = "contact">
+        <span style= "font-size: 12px;">CONTACT:</span> <br>amyvuong1998@gmail.com <br>
+        <span style = "font-size: 10px;">Updated September 2019</span>
     </div>
-</div>
-
-<div id = "skillsSection" class="sections">
-    <h4>Current Abilities </h4>
-
-<div class="sectionBody">
-<div class="tab">
-  <button id="langLink" class="tablinks" onclick="openSkill(event, 'languagesContainer', 'langLink')">PROGRAMMING LANGUAGES</button>
-  <button id="skillLink" class="tablinks" onclick="openSkill(event, 'proSkillsContainer', 'skillLink')">SKILLS</button>
-  <button id="traitsLink" class="tablinks" onclick="openSkill(event, 'traitsContainer', 'traitsLink')">PERSONALITY TRAITS</button>
-</div>
-
-
-<!--
-<span class = "subtitles">
-PROGRAMMING <br> LANGUAGES</span>
--->
-
-<div id="languagesContainer" class="tabcontent">
-<table id = "languages" ><!--style = "width:70%; padding: 2vw 2vw 10vw 2vw; left: 30%; float: right;"-->
-  <tr>
-    <th>LANGUAGE</th>
-    <th>Basic</th>
-    <th>Intermediate</th>
-    <th>Proficient</th>
-  </tr>
-  <tr>
-    <td>Java</td>
-    <td></td>
-    <td></td>
-    <td style= "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Python</td>
-    <td></td>
-    <td style= "background-color: white"></td>
-    <td></td>
-  </tr>
-    <tr>
-      <td>HTML</td>
-      <td></td>
-      <td></td>
-      <td style = "background-color: white"></td>
-    </tr>
-    <tr>
-      <td>CSS</td>
-      <td></td>
-      <td></td>
-      <td style = "background-color: white"></td>
-    </tr>
-  <tr>
-    <td>C</td>
-    <td></td>
-    <td style= "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>R</td>
-    <td></td>
-    <td style = "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>C#</td>
-    <td></td>
-    <td style = "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>OCaml</td>
-    <td></td>
-    <td style = "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Ruby</td>
-    <td></td>
-    <td style= "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>SQL</td>
-    <td></td>
-    <td style = "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Javascript</td>
-    <td style = "background-color: white"></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
-</div>
-</div>
-
-<!--
-<span class = "subtitles">
-SKILLS <br> </span>
--->
-
-<div id="proSkillsContainer" class="tabcontent">
-<table id = "proSkills" ><!--style = "width:70%; padding: 10vw 2vw 10vw 2vw; left: 30%; float: right;"-->
-  <tr>
-    <th>SKILL</th>
-    <th>Basic</th>
-    <th>Intermediate</th>
-    <th>Proficient</th>
-  </tr>
-  <tr>
-    <td>Algorithms</td>
-    <td></td>
-    <td  style= "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Web Development</td>
-    <td></td>
-    <td style= "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Creative Writing</td>
-    <td></td>
-    <td></td>
-    <td style = "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Customer Service</td>
-    <td></td>
-    <td></td>
-    <td style= "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Design</td>
-    <td></td>
-    <td></td>
-    <td style = "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Googling / Research</td>
-    <td></td>
-    <td style = "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Cantonese</td>
-    <td></td>
-    <td style = "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Spanish</td>
-    <td style = "background-color: white"></td>
-    <td></td>
-    <td></td>
-  </tr>
-
-</table>
-
-</div>
-<br><br>
-
-<!--
-<span class = "subtitles" style= "right: 0; float: right;">
-PERSONALITY <br> TRAITS</span>
--->
-<div id="traitsContainer" class="tabcontent">
-<table id = "traits" >  <!--style = "width:70%; padding: 2vw; right: 30%; float: left;"-->
-  <tr>
-    <th>TRAIT</th>
-    <th>Basic</th>
-    <th>Intermediate</th>
-    <th>Proficient</th>
-  </tr>
-  <tr>
-    <td>Friendly</td>
-    <td></td>
-    <td></td>
-    <td style= "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Creative</td>
-    <td></td>
-    <td></td>
-    <td style= "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Detail-oriented</td>
-    <td></td>
-    <td></td>
-    <td style = "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Organized</td>
-    <td></td>
-    <td style= "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Caring</td>
-    <td></td>
-    <td></td>
-    <td style = "background-color: white"></td>
-  </tr>
-   <tr>
-     <td>Outgoing</td>
-     <td></td>
-     <td style = "background-color: white"></td>
-     <td></td>
-   </tr>
-  <tr>
-    <td>Honest</td>
-    <td></td>
-    <td></td>
-    <td style = "background-color: white"></td>
-  </tr>
-  <tr>
-    <td>Awkward</td>
-    <td></td>
-    <td style = "background-color: white"></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Beautiful</td>
-    <td style = "background-color: white"></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Honest</td>
-    <td style = "background-color: white; color: black; font-size: 10px; text-align: center;">See what I did there</td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
-
-</div>
-
-</div>
-
-
-<div id = "projectsSection" class="sections">
-    <h5>Coding Projects</h5>
-<div class="sectionBody">
-<span style="padding-left: 35vw; font-size: 3vw">WEBSITES
-</span>
-<br><br>
-    <div id="projectsBox">
-        <a href = "https://amyamyv.github.io"  target="_blank" class = "myWebsiteLinks"> amyamyv.github.io </a> <br> <br>
-            <p class = "projectDiscr"><span class="bigProDesc">Personal photo journal website</span><br> of my pictures, experiences, and internet stuff I find funny</p>
-        <br>
-        <a href = "https://www.amyofamy.com"  target="_blank" class = "myWebsiteLinks"> amyofamy.com</a>  <br> <br>
-            <p class = "projectDiscr"><span class="bigProDesc">Professional, personal website </span><br> of my skills, projects, and experience (this one!) </p>
-
-
-        <br>
-        <a href = "http://auyyon.com"  target="_blank" class = "myWebsiteLinks"> Auyyon</a>  <br> <br>
-            <p class = "projectDiscr"> <span class="bigProDesc">Simplified online learning website </span>
-                                        <br>pointing hobby/skill seekers to certain, screened (by yours truly) free learning resources.
-                                        <br>Links listed to effectually learn skill. <br>Learn, Watch, Do, MASTER.</p>
-
-
-        <br>
-        <p style = "display: block; clear: both; left: 0; padding: 5vw;">...and more on the way!</p>
-
-    </div>
-</div>
-</div>
-
-
-<div id = "contact">
-    <span style= "font-size: 12px;">CONTACT:</span> <br>amyvuong1998@gmail.com <br>
-    <span style = "font-size: 10px;">Updated September 2019</span>
-</div>
 
 </body>
-
-
-<script>
-
-//collapsable 3 tabbed vertical box
-function openSkill(evt, skillName, linkName) {
-    // Declare all variables
-    var i, tabcontent, tablinks;
-
-    if (document.getElementById(skillName).style.display === "block") {
-        document.getElementById(skillName).style.display = "none";
-        document.getElementById(linkName).className = document.getElementById(linkName).className.replace(" active", "");
-
-    } else {
-
-        // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-
-        // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(skillName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-
-}
-
-
-</script>
-
 
 </html>
